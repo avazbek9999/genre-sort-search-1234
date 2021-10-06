@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''), url('../fonts/barlow-v5-latin-500.woff2') format('woff2'),
+        url('../fonts/barlow-v5-latin-500.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/barlow-v5-latin-regular.woff2') format('woff2'),
+        url('../fonts/barlow-v5-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''), url('../fonts/barlow-v5-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/fraunces-v10-latin-regular.woff2') format('woff2'),
+        url('../fonts/fraunces-v10-latin-regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''), url('../fonts/fraunces-v10-latin-900.woff2') format('woff2'),
+        url('../fonts/fraunces-v10-latin-900.woff') format('woff');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+    scroll-behavior: smooth;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body {
+    font-family: 'barlow', sans-serif, 'fraunse', serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 110px;
+}
+
+img{
+    object-position: top;
+    object-fit: cover;
+    display: block;
+}
+
+ /*=========================== site header================================ */
+
+.site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background:linear-gradient(#c9d6ff,#e2e2e2);
+}
+
+.site-header .container{
+    display: flex;
+    align-items: center;
+   
+}
+.film__logo__img{
+    width: 100%;
+    max-width: 210px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.site-nav{
+    margin-left: auto;
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+}
+
+
+
+.nav-link{
+    font-family: Barlow;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 15px;
+    color: #83888f;
+}
+
+.nav-link:hover{
+    color: white;
+}
+
+.nav-link--active{
+    color: black;
+}
+
+/* ========================site main========================== */
+
+.form{
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+
+.form__btn{
+    display: block;
+    padding: 8px 16px;
+    color: #3D4966;
+    background-color: transparent;
+    border: 2px solid #3D4966;
+    border-radius: 4px;
+    position: relative;
+    z-index: 10;
+
+}
+
+.form__btn::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #3D4966;
+    transition: .3s linear;
+    z-index: -1;
+    content: '';
+}
+
+.form__btn:hover::before{
+    width: 100%;
+    right: 0;
+}
+
+.form__btn:hover{
+    color: white;
+
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list__item{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    border: 1px solid rgb(212, 198, 198);
+    border-radius: 5px;
+    background:linear-gradient(#c9d6ff,#e2e2e2);
+
+   
+}
+
+.list__item:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.film__heading{
+    font-family: Barlow;
+    text-align: center;
+    color: #302b63;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.film__image{
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.film__paragrf{
+    font-family: Barlow;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    color: #636363;
+}
+
+.genre-headding{
+    font-family: Barlow;
+    margin: 0;
+    margin-bottom: 0;
+    padding: 0;
+    color: #0575E6;
+}
+
+.genre-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+    list-style: none;
+}
+.genre-list__item{
+    font-family: Barlow;
+    margin: 0;
+    font-size: 14px;
+    color: #f7b733;
+}
+
+.film__date{
+    font-family: Barlow;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    color: #42533C;
+}
